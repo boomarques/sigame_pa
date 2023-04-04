@@ -2,7 +2,11 @@ from django.shortcuts import render
 
 ########################################################################## HOME
 def home(request):
-  return render(request, 'home.html')
+
+  if request.device.is_mobile:
+    return render(request, 'home-mobile.html')
+  else:
+    return render(request, 'home.html')
 
 def convenios(request):
   return render(request, 'cliente/convenios.html')
