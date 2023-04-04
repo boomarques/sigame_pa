@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 ########################################################################## HOME
 def home(request):
-
-  if request.device.is_mobile:
+  
+  if request.device['is_mobile']:
     return render(request, 'home-mobile.html')
   else:
     return render(request, 'home.html')

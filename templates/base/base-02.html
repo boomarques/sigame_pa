@@ -1,0 +1,32 @@
+{% extends 'base/base-00.html' %}
+{%load static%}
+
+{% block base-00 %}
+
+<div class="container-mob">
+  <header class="my-navbar-mob">
+    <a href="/"> <img src="{% static 'imgs/logo_02.png'%}" alt="logo" width="200px"></a>
+
+    <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="my-offcanvas">
+        <a href="#">Home</a>
+        <a href=""> Nova Consulta</a>    
+        <a href="">Novo Exame</a>
+        <a href="">Minhas Guias</a>
+        <a href="">Financeiro</a>
+        <a href="">Convênios</a>
+      </div>
+    </div>
+  </header>
+  {% block base-02 %}{% endblock %}
+  
+</div>
+{% endblock %}
