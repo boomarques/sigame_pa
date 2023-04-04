@@ -1,0 +1,20 @@
+{% extends 'base/base-01.html' %}
+{%load static%}
+
+{% block base-01 %}
+<div class="home-content">
+  <h4>Novo Exame</h4>
+  <hr>
+  <h5>
+    Tipo do exame: <br> <br>
+    Descrição do exame: <br> <br>
+    Convênio onde será realizado: <br> <br>
+  </h5>
+
+  <p>
+    Device is a mobile: {{request.device.is_mobile}} <br>
+    Device is a tablet: {{request.device.is_tablet}}
+  </p>
+
+</div>
+{% endblock %}

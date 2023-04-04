@@ -1,0 +1,77 @@
+{% extends 'base/base-01.html' %}
+{%load static%}
+
+{% block base-01 %}
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link " aria-current="page" href="/cliente/mg_solicitadas/">Solicitadas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/cliente/mg_aprovadas/">Aprovadas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="/cliente/mg_faturadas/">Faturadas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="/cliente/mg_auditadas/">Auditadas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="/cliente/mg_canceladas/"> Canceladas </a>
+    </li>
+  </ul>
+
+  <div class="home-content-mg">
+
+  <div class="mg-content">
+    <div class="mg-table-head">
+      <h5>CONSULTAS</h5>
+      <div class="mg-table-head-pagination">
+        <a href="">
+          <i class="fa fa-step-backward"></i>
+        </a>
+        <h6>1 de 1</h6>
+        <a href="">
+          <i class="fa fa-step-forward"></i>
+        </a>
+      </div>
+    </div>
+    <div class="mg-table">
+      <a href="">
+        <div class="mg-table-line"></div>
+        <div class="mg-table-line">
+          <div style="width: 15%;">C-00000001</div>
+          <div style="width: 35%;"> Nome da Especialidade</div> 
+          <div style="width: 35%;">Hospital Fictício de Sorocaba</div>
+          <div style="width: 15%; text-align: right;"> 1/3/2023</div>
+        </div>
+      </a>
+    </div>
+    <hr>
+    <div class="mg-table-head">
+      <h5>EXAMES</h5>
+      <div class="mg-table-head-pagination">
+        <a href="">
+          <i class="fa fa-step-backward"></i>
+        </a>
+        <h6>1 de 1</h6>
+        <a href="">
+          <i class="fa fa-step-forward"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mg-table">
+      <a href="">
+        <div class="mg-table-line"></div>
+        <div class="mg-table-line">
+          <div style="width: 15%;">E-00000001</div>
+          <div style="width: 35%;"> Nome da Especialidade</div> 
+          <div style="width: 35%;">Laboratório Fictício de Sorocaba</div>
+          <div style="width: 15%; text-align: right;"> 1/3/2023</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  </div>
+{% endblock %}

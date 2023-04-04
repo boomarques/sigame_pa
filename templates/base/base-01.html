@@ -1,0 +1,33 @@
+{% extends 'base/base-00.html' %}
+{%load static%}
+
+{% block base-00 %}
+<div class="container">
+  <nav class="my-navbar">
+    <div class="my-navbar-side-a">
+      <a href="/"> <img src="{% static 'imgs/logo_02.png'%}" alt="logo" width="200px"></a>
+    </div>
+
+    <div class="my-navbar-side-b">
+      <a href="/cliente/nova_consulta/">NOVA CONSULTA</a>
+      <a href="/cliente/novo_exame/">NOVO EXAME</a>
+      <a href="/cliente/mg_solicitadas/">MINHAS GUIAS</a>
+      <a href="/cliente/financeiro/">FINANCEIRO</a>
+      <a href="/cliente/convenios/">CONVÊNIOS</a>
+    </div>
+
+    <div class="my-navbar-side-c">
+        <a class="dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{request.user.username}} ({{request.user.first_name}})
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="admin/logout/">Desconectar</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="content">
+    {% block base-01 %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
