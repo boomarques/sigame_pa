@@ -1,10 +1,11 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from apps.cliente import views as clienteViews
 
 urlpatterns = [
 #============================================================================================ ADMIN
   path('admin/', admin.site.urls),
+  path('', include('django.contrib.auth.urls')),
 
 #============================================================================================= HOME
   path('', clienteViews.home, name='home'),
@@ -19,7 +20,5 @@ urlpatterns = [
   path('cliente/mg_faturadas/', clienteViews.mgFaturadas, name='mg-faturadas'),
   path('cliente/mg_auditadas/', clienteViews.mgAuditadas, name='mg-auditadas'),
   path('cliente/mg_canceladas/', clienteViews.mgCanceladas, name='mg-canceladas'),
-
-
 #==================================================================================================
 ]

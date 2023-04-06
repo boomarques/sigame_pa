@@ -79,6 +79,30 @@ body {
   padding-bottom: 10px;
 }
 
+/************************************************************************************ LOGIN PAGE */
+.login-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 350px;
+  height: 450px;
+  background-color: var(--color-01);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  color: #A6A6A6;
+}
+
 /************************************************************************************* HOME PAGE */
 .home-content {
   width: 100%; 
