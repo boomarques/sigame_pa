@@ -13,7 +13,10 @@
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
-        <h5 style="color: white;">Menu</h5>
+        <div class="my-offcanvas-head">
+          <h5 style="color: white;">{{request.user.username}}</h5>
+          <a class="my-offcanvas-link" href="/logout/">(Sair)</a>
+        </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="my-offcanvas">
