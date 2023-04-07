@@ -21,7 +21,7 @@
   min-height: calc(100vh - 80px);
 }
 
-.home-content-mob > div, .home-content-mob > h6 {
+.text-center {
   text-align: center;
 }
 
@@ -53,4 +53,8 @@
 .my-offcanvas-link {
   padding: 7px 10px;
   color: white;
+}
+
+.convenios-descricao {
+  text-align: left;
 }
