@@ -8,10 +8,11 @@
       <input type="hidden" name="next" value="{{ next }}">
       {% csrf_token %}
       <img src="{% static 'imgs/logo 01.png'%}" alt="logo" width="150px">
-      <div style="width: 100%; color: white;">
+      <div style="width: 350px; color: white;">
         {{ form|crispy }}
       </div>
       <button style="width: 150px; margin-top: 15px;" type="submit" class="btn btn-success btn-block"> Entrar </button>
+      <div style="height: 75px;"></div>
     </form>
   </div>
 {% endblock %}

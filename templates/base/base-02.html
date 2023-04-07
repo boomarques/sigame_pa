@@ -14,17 +14,19 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
         <div class="my-offcanvas-head">
-          <h5 style="color: white;">{{request.user.username}}</h5>
-          <a class="my-offcanvas-link" href="/logout/">(Sair)</a>
+          <h5 style="color: white;">Olá, {{request.user.first_name}}!</h5>
+          <a class="my-offcanvas-link" style="color: orangered;" href="/logout/">Desconectar</a>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="my-offcanvas">
-      <a class="my-offcanvas-link" href="/">Home</a>
+      <!--<a class="my-offcanvas-link" href="/">Home</a>-->
       <a class="my-offcanvas-link" href="/cliente/nova_consulta/">Nova Consulta</a>
       <a class="my-offcanvas-link" href="/cliente/novo_exame/">Novo Exame</a>
+      <hr>
       <a class="my-offcanvas-link" href="/cliente/financeiro/">Financeiro</a>
       <a class="my-offcanvas-link" href="/cliente/convenios/">Convênios</a>
+      <hr>
       <a class="my-offcanvas-link" href="/cliente/mg_solicitadas/">Guias Solicitadas</a>
       <a class="my-offcanvas-link" href="/cliente/mg_aprovadas/">Guias Aprovadas</a>
       <a class="my-offcanvas-link" href="/cliente/mg_faturadas/">Guias Faturadas</a>
@@ -34,6 +36,6 @@
     </div>
   </header>
   {% block base-02 %}{% endblock %}
-  
+
 </div>
 {% endblock %}
