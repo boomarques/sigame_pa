@@ -38,15 +38,19 @@
       </div>
     </div>
     <div class="mg-table">
-      <a href="">
-        <div class="mg-table-line"></div>
-        <div class="mg-table-line">
-          <div style="width: 15%;">C-00000001</div>
-          <div style="width: 35%;"> Nome da Especialidade</div> 
-          <div style="width: 35%;">Hospital Fictício de Sorocaba</div>
-          <div style="width: 15%; text-align: right;"> 1/3/2023</div>
-        </div>
-      </a>
+      <div class="mg-table-line"></div>
+
+      {% for i in consultas %}
+        <a href="">
+          <div class="mg-table-line">
+            <div style="width: 15%;"> C-{{ i.id }} </div>
+            <div style="width: 35%;"> {{ i.especialidade }} </div> 
+            <div style="width: 35%;"> {{ i.local }} </div>
+            <div style="width: 15%; text-align: right;"> {{ i.criacao.day }}/{{ i.criacao.month }}/{{ i.criacao.year }}</div>
+          </div>
+        </a>
+      {% endfor %}
+      
     </div>
     <hr>
     <div class="mg-table-head">

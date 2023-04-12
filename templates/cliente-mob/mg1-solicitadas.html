@@ -3,8 +3,20 @@
 
 {% block base-02 %}
 <div class="home-content-mob">
-  <h5>Guias Solicitadas</h5>
+  <h5>Consultas Solicitadas</h5>
   <hr>
-  <p>Página em Construção</p>
+  {% for i in consultas %}
+    <div style="background-color: rgb(245, 245, 245); margin: 7px; padding: 5px;">
+      <a href="">
+        <h6 style="color: rgb(54, 74, 74);">
+          C-{{ i.id }} - {{ i.criacao.day }}/{{ i.criacao.month }}/{{ i.criacao.year }} <br>
+          {{ i.especialidade }} - {{ i.local }} 
+        </h6>
+      </a>
+    </div>
+  {% endfor %}
+  <br> <br>        
+  <h5>Exames Solicitadas</h5>
+  <hr>
 </div>
 {% endblock %}

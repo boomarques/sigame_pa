@@ -64,10 +64,12 @@ def novoExame(request):
 ################################################################### SOLICITADAS
 @login_required(login_url='/login/')
 def mgSolicitadas(request):
+  consultas = TesteConsultas.objects.filter(situacao='Solicitada')
+
   if request.device['is_mobile']:
-    return render(request, 'cliente-mob/mg1-solicitadas.html')
+    return render(request, 'cliente-mob/mg1-solicitadas.html', {'consultas':consultas})
   else:
-    return render(request, 'cliente/mg1-solicitadas.html')
+    return render(request, 'cliente/mg1-solicitadas.html', {'consultas':consultas})
 
 ##################################################################### APROVADAS
 @login_required(login_url='/login/')
