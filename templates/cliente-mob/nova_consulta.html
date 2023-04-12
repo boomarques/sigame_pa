@@ -1,10 +1,15 @@
 {% extends 'base/base-02.html' %}
 {%load static%}
+{% load crispy_forms_tags %}
 
 {% block base-02 %}
 <div class="home-content-mob">
   <h5>Solicitação de Nova Consulta</h5>
   <hr>
-  <p>Página em Construção</p>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-success" value="enviar" style="margin-top: 30px; width: 100%;">
+  </form>
 </div>
 {% endblock %}

@@ -3,8 +3,162 @@
 
 {% block base-01 %}
 <div class="home-content">
-  <h4>Informações sobre convênios</h4>
+  <h4>Convênios para Consultas:</h4>
   <hr>
-  <h6>Endereços, telefones e especialidades disponíveis</h6>
+  <div class="accordion accordion-flush" id="accordionConsultas">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#consulta-collapseB" aria-expanded="false" aria-controls="consulta-collapseB">
+          Centro Médico do Porto
+        </button>
+      </h2>
+      <div id="consulta-collapseB" class="accordion-collapse collapse" data-bs-parent="#accordionConsultas">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Princial, 123 - Sorocaba - SP - 18000-000 <br> <br>
+            Especialidades Atendidas: <br>
+            <ul>
+              <li>Clínico Geral</li>
+              <li>Dermatologia</li>              
+              <li>Endocrinologia</li>
+              <li>Ginecologia</li>
+              <li>Mastologia</li>
+              <li>Nutricionista</li>
+              <li>Nutrologia</li>
+              <li>Obstetrícia</li>
+              <li>Oftalmologia</li>
+              <li>Ortopedia</li>
+              <li>Otorrinolaringologia</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#consulta-collapseC" aria-expanded="false" aria-controls="consulta-collapseC">
+          Clínica Lisboa
+        </button>
+      </h2>
+      <div id="consulta-collapseC" class="accordion-collapse collapse" data-bs-parent="#accordionConsultas">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Princial, 123 - Sorocaba - SP - 18000-000 <br> <br>
+            Especialidades Atendidas: <br>
+            <ul>
+              <li>Alergologia</li>
+              <li>Geriatria</li>
+              <li>Nefrologia</li>
+              <li>Neurologia</li>
+              <li>Pediatria</li>
+              <li>Psicologia</li>
+              <li>Psiquiatria</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#consulta-collapseA" aria-expanded="false" aria-controls="consulta-collapseA">
+          Hospital Vila Nova de Gaia
+        </button>
+      </h2>
+      <div id="consulta-collapseA" class="accordion-collapse collapse" data-bs-parent="#accordionConsultas">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Princial, 123 - Sorocaba - SP - 18000-000 <br> <br>
+            Especialidades Atendidas: <br>
+            <ul>
+              <li>Clínico Geral</li>
+              <li>Dermatologia</li>              
+              <li>Endocrinologia</li>
+              <li>Ginecologia</li>
+              <li>Mastologia</li>
+              <li>Nutricionista</li>
+              <li>Nutrologia</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br> <br>
+
+  <h4>Convênios para Exames:</h4>
+  <hr>
+
+  <div class="accordion accordion-flush" id="accordionExames">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exame-collapseB" aria-expanded="false" aria-controls="exame-collapseB">
+          Centro Laboratorial Aveiro
+        </button>
+      </h2>
+      <div id="exame-collapseB" class="accordion-collapse collapse" data-bs-parent="#accordionExames">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Secundária, 456 - Sorocaba - SP - 18000-000 <br> <br>
+            Exames Realizados: <br>
+            <ul>
+              <li>Laboratorias</li>
+              <li>De Imagem</li>
+              <li>Cardiológicos</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exame-collapseC" aria-expanded="false" aria-controls="exame-collapseC">
+          Hospital Vila Nova de Gaia
+        </button>
+      </h2>
+      <div id="exame-collapseC" class="accordion-collapse collapse" data-bs-parent="#accordionExames">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Secundária, 456 - Sorocaba - SP - 18000-000 <br> <br>
+            Exames Realizados: <br>
+            <ul>
+              <li>Anatomia Patológica</li>
+              <li>Sistema Digestório</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exame-collapseA" aria-expanded="false" aria-controls="exame-collapseA">
+          Instituto Diagnóstico Coimbra 
+        </button>
+      </h2>
+      <div id="exame-collapseA" class="accordion-collapse collapse" data-bs-parent="#accordionExames">
+        <div class="accordion-body">
+          <h6 class="convenios-descricao"> 
+            Tel.: (15) 987.654.321 <br>
+            Avenida Secundária, 456 - Sorocaba - SP - 18000-000 <br> <br>
+            Exames Realizados: <br>
+            <ul>
+              <li>Hemograma</li>
+              <li>Ressonância Magnética</li>
+              <li>Cardiológicos</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

@@ -1,6 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+
+from cliente.models import TesteConsultas
+from cliente.forms import TesteConsultasForm
 
 ########################################################################## HOME
 @login_required(login_url='/login/')
@@ -29,11 +33,24 @@ def financeiro(request):
 ################################################################# NOVA CONSULTA
 @login_required(login_url='/login/')
 def novaConsulta(request):
-  if request.device['is_mobile']:
-    return render(request, 'cliente-mob/nova_consulta.html')
-  else:
-    return render(request, 'cliente/nova_consulta.html')
 
+  if request.method == 'POST':
+    form = TesteConsultasForm(request.POST)
+
+    if form.is_valid():
+      item = form.save(commit=False)
+      item.usuario = str(request.user.username)
+      item.save()
+      return redirect('/cliente/mg_solicitadas/')
+    
+  else: 
+    form = TesteConsultasForm()
+
+    if request.device['is_mobile']:
+      return render(request, 'cliente-mob/nova_consulta.html', {'form':form})
+    else:
+      return render(request, 'cliente/nova_consulta.html', {'form':form})
+    
 #################################################################### NOVO EXAME
 @login_required(login_url='/login/')
 def novoExame(request):
